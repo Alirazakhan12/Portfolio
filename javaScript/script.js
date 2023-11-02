@@ -14,7 +14,7 @@ function show() {
 
 $(window).scroll(function () {
   let scroll = $(window).scrollTop();
-  if (scroll > 150) {
+  if (scroll > 100) {
     $(".container-fluid").css("background", "#0a131d");
     $(".container-fluid").css("transition", "0.50s");
   } else {
