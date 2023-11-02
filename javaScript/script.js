@@ -11,9 +11,10 @@ function show() {
 }
 
 //With scrolling Nav background appear
+
 $(window).scroll(function () {
   let scroll = $(window).scrollTop();
-  if (scroll > 200) {
+  if (scroll > 150) {
     $(".container-fluid").css("background", "#0a131d");
     $(".container-fluid").css("transition", "0.50s");
   } else {
