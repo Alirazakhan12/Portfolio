@@ -15,7 +15,8 @@
 #main-div {
   width: 100%;
   height: 600px;
-  background: linear-gradient(to right, #262525 70%, #3877ff 30%);
+  background: linear-gradient(to right, #02294c 70%, #3877ff 30%);
+  border-bottom: 1px solid white;
 }
 #container {
   position: absolute;
@@ -29,6 +30,7 @@
 }
 .navbar-nav .nav-link {
   position: relative;
+  font-weight: bold;
 }
 .navbar-nav .nav-item .nav-link::after {
   content: "";
@@ -44,10 +46,27 @@
 .navbar-nav .nav-item .nav-link:hover::after {
   transform: scale(1);
 }
-#heading1 {
-  margin-top: 50px;
+
+#logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+#moon-icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+#moon-icon:hover {
+  background-color: #02294c;
+}
+#caption {
+  margin-top: 18%;
   padding-top: 20px;
-  font-weight: bold;
+  font-size: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 #img-div {
@@ -91,6 +110,38 @@
 }
 #cv-btn {
   margin-top: 20px;
+  border: 2px solid white;
+  padding: 8px 18px 8px 18px;
+  border-radius: 24px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#cv-btn:hover {
+  background-color: white;
+  color: #373a3e;
+  transition: ease-in-out 0.5s;
+}
+
+#cv-btn2 {
+  margin-top: 20px;
+  border: 2px solid #3877ff;
+  padding: 8px 18px 8px 18px;
+  border-radius: 24px;
+  color: #373a3e;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#cv-btn2:hover {
+  background-color: #3877ff;
+  color: #ffffff;
+  transition: ease-in-out 0.2s;
 }
 @media (max-width: 991px) {
   #img-div {
@@ -374,16 +425,32 @@
 #footer-portfo {
   font-family: var(--body-fonts);
 }
+#footer {
+  background-color: #0e3360;
+}
 
 /* Scroll up button */
 #scroll-icon {
   color: #3877ff;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 0px 12px 0px 12px;
+  border-radius: 50%;
   position: absolute;
   position: fixed;
   bottom: 20px;
   right: 20px;
   text-align: center;
-  line-height: 40px;
+  line-height: 37px;
   display: none;
   cursor: pointer;
+}
+#scroll-icon:hover {
+  background-color: #6596ff;
+  color: white;
+}
+
+/* Mode Icon css */
+.dark-mode {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
 }
