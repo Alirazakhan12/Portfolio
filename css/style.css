@@ -47,16 +47,20 @@
   transform: scale(1);
 }
 
+#offcanvasNavbar {
+  background-color: #02294c;
+}
 #logo {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
 #moon-icon {
-  border: 1px solid white;
   border-radius: 50%;
   height: 40px;
+  line-height: 40px;
   width: 40px;
   text-align: center;
+  margin-top: -7px;
 }
 #moon-icon:hover {
   background-color: #02294c;
@@ -64,7 +68,7 @@
 #caption {
   margin-top: 18%;
   padding-top: 20px;
-  font-size: 44px;
+  font-size: 34px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
 }
@@ -105,7 +109,7 @@
   background-color: white;
   color: black;
   transform: scale(1.2);
-  transition: 0.5;
+  transition: 0.11s;
   cursor: pointer;
 }
 #cv-btn {
@@ -126,7 +130,7 @@
   transition: ease-in-out 0.5s;
 }
 
-#cv-btn2 {
+.cv-btn2 {
   margin-top: 20px;
   border: 2px solid #3877ff;
   padding: 8px 18px 8px 18px;
@@ -138,9 +142,9 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-#cv-btn2:hover {
+.cv-btn2:hover {
   background-color: #3877ff;
-  color: #ffffff;
+  color: white;
   transition: ease-in-out 0.2s;
 }
 @media (max-width: 991px) {
@@ -149,10 +153,21 @@
     margin-top: 60px;
     margin-left: 20px;
   }
+  #moon-icon {
+    padding: 40%;
+    background-color: none;
+    color: black;
+  }
+  #moon-icon:hover {
+    background-color: transparent;
+  }
 }
 @media (max-width: 768px) {
   #img-div {
     margin-top: 70px;
+  }
+  #caption {
+    font-size: 28px;
   }
 }
 @media (max-width: 576px) {
@@ -160,21 +175,21 @@
     width: 50%;
     height: 250px;
     margin: auto;
-    margin-top: -40px;
+    margin-top: 0px;
   }
   #main-div {
-    background: #262525;
+    background: #02294c;
   }
 
-  #heading1 {
-    font-size: 16px;
+  #caption {
+    font-size: 24px;
   }
 
   #para {
     font-size: 14px;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 386px) {
   #img-div {
     width: 60%;
     height: 200px;
@@ -203,6 +218,9 @@
     width: 70%;
     height: 150px;
     margin: auto;
+  }
+  #caption {
+    font-size: 18px;
   }
 }
 
@@ -262,17 +280,35 @@
     display: none;
   }
   #about-text {
-    margin-top: 20%;
+    margin-top: 30%;
   }
 }
-@media (max-width: 336px) {
+@media (max-width: 542px) {
+  #about-div {
+    display: none;
+  }
   #about-text {
-    margin-top: 47%;
+    margin-top: 40%;
   }
 }
-@media (max-width: 236px) {
+@media (max-width: 400px) {
   #about-text {
-    margin-top: 60%;
+    margin-top: 50%;
+  }
+}
+@media (max-width: 317px) {
+  #about-text {
+    margin-top: 65%;
+  }
+}
+@media (max-width: 290px) {
+  #about-text {
+    margin-top: 70%;
+  }
+}
+@media (max-width: 290px) {
+  #about-text {
+    margin-top: 70%;
   }
 }
 /* About section CSS End*/
@@ -316,6 +352,12 @@
   #ui-ux-card {
     margin-top: 64px;
   }
+  #web-design-card,
+  #seo-card,
+  #web-card,
+  #ui-ux-card {
+    margin: 24px;
+  }
 }
 
 /* my work section css */
@@ -336,10 +378,15 @@
     margin-top: 34px;
   }
 }
+@media (max-width: 768px) {
+  #my-card {
+    margin: 24px;
+  }
+}
 
 /* contact us section */
 #contact {
-  width: 100%;
+  /* width: 100%; */
   background-color: white;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   padding: 30px;
@@ -371,7 +418,8 @@
 }
 
 #address {
-  width: 100%;
+  /* width: 100%; */
+  height: 100%;
   background-color: white;
   color: rgb(126, 126, 126);
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -387,13 +435,13 @@
 #location-icon,
 #phone-icon,
 #email-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: white;
   border-radius: 50%;
   text-align: center;
-  line-height: 60px;
-  font-size: 34px;
+  line-height: 40px;
+  font-size: 24px;
   color: #3877ff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-image: linear-gradient(
@@ -404,7 +452,16 @@
 
 @media (max-width: 768px) {
   #address {
-    margin-top: 34px;
+    margin-top: 18px;
+  }
+}
+@media (max-width: 576px) {
+  #address,
+  #contact {
+    margin: 24px;
+  }
+  #address {
+    margin-top: 0px;
   }
 }
 
@@ -431,8 +488,8 @@
 
 /* Scroll up button */
 #scroll-icon {
-  color: #3877ff;
-  border: 2px solid rgb(255, 255, 255);
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255);
   padding: 0px 12px 0px 12px;
   border-radius: 50%;
   position: absolute;
@@ -443,9 +500,10 @@
   line-height: 37px;
   display: none;
   cursor: pointer;
+  background-color: #0e3360;
 }
 #scroll-icon:hover {
-  background-color: #6596ff;
+  background-color: #17447b;
   color: white;
 }
 

@@ -56,7 +56,7 @@ const modeToggle = document.getElementById("moon-icon");
 let darkMode = false;
 
 modeToggle.addEventListener("click", (event) => {
-  event.preventDefault();     // Prevent the default form submission behavior
+  event.preventDefault(); // Prevent the default form submission behavior
   darkMode = !darkMode;
   updateTheme();
 });
@@ -68,23 +68,79 @@ function updateTheme() {
   let uiCard = document.getElementById("ui-ux-card");
   let webDesignCard = document.getElementById("web-design-card");
   let seoCard = document.getElementById("seo-card");
-  let cvBtn = document.getElementById("cv-btn2");
+  let cvBtn = document.getElementsByClassName("cv-btn2")[0];
+  let contact = document.getElementById("contact");
+  let address = document.getElementById("address");
+  let mycard = document.querySelector("#my-card");
+  let mycard2 = document.querySelectorAll(".my-card")[0];
+  let mycard3 = document.querySelectorAll(".my-card")[1];
+  let moon_icon = document.getElementsByClassName("fa-moon")[0];
   if (darkMode) {
     // Dark mode
     body.style.backgroundColor = "#02294C";
     body.style.color = "white"; // Change text color to white
     scroll_icon.style.color = "white";
     caption.style.color = "white";
-    webCard.style.color = "black";
-    uiCard.style.color = "black";
-    webDesignCard.style.color = "black";
-    seoCard.style.color = "black";
+    webCard.style.color = "white";
+    webCard.style.backgroundColor = "#0E3360";
+    uiCard.style.color = "white";
+    uiCard.style.backgroundColor = "#0E3360";
+    webDesignCard.style.color = "white";
+    webDesignCard.style.backgroundColor = "#0E3360";
+    seoCard.style.color = "white";
+    seoCard.style.backgroundColor = "#0E3360";
     cvBtn.style.color = "white";
+    contact.style.backgroundColor = "#0E3360";
+    address.style.backgroundColor = "#0E3360";
+    address.style.color = "white";
+    mycard.style.backgroundImage = "none";
+    mycard.style.backgroundColor = "#0E3360";
+    mycard2.style.backgroundImage = "none";
+    mycard2.style.backgroundColor = "#0E3360";
+    mycard3.style.backgroundImage = "none";
+    mycard3.style.backgroundColor = "#0E3360";
+    moon_icon.style.color = "#3877ff";
   } else {
     // Light mode
     body.style.backgroundColor = "white";
     body.style.color = "#02294C"; // Change text color to black
-    scroll_icon.style.color = "#3877ff";
+    scroll_icon.style.color = "";
     caption.style.color = "#373a3e";
+    webCard.style.color = "";
+    webCard.style.backgroundColor = "";
+    uiCard.style.color = "";
+    uiCard.style.backgroundColor = "";
+    webDesignCard.style.color = "";
+    webDesignCard.style.backgroundColor = "";
+    seoCard.style.color = "";
+    seoCard.style.backgroundColor = "";
+    cvBtn.style.color = "";
+    contact.style.backgroundColor = "";
+    address.style.backgroundColor = "";
+    address.style.color = "";
+    mycard.style.backgroundImage = "";
+    mycard.style.backgroundColor = "";
+    mycard2.style.backgroundImage = "";
+    mycard2.style.backgroundColor = "";
+    mycard3.style.backgroundImage = "";
+    mycard3.style.backgroundColor = "";
+    moon_icon.style.color = "";
   }
 }
+
+// LocalStorage for storing form data...
+
+let sendBtn = document.getElementById("send-btn");
+sendBtn.addEventListener("click", function () {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+
+  localStorage.setItem("name", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("message", message);
+
+  localStorage.getItem("name");
+  localStorage.getItem("email");
+  localStorage.getItem("message");
+});

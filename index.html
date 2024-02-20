@@ -24,11 +24,11 @@
 
 <body onscroll="toggleScrollbtn()">
  <!-- Navbar start -->
- <nav class="navbar navbar-expand-lg py-0 ">
+ <!-- <nav class="navbar navbar-expand-lg py-0 navbar-dark bg-transparent">
   <div class="container-fluid py-1" id="container">
-   <a id="logo" href="index.html" class="text-white navbar-brand fs-1 fw-bold ms-5">Port<span class="text-primary" id="logo">folio</span></a>
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"> </span>
+   <a data-aos="fade-right" data-aos-duration="1000"  id="logo" href="index.html" class="text-white navbar-brand fs-1 fw-bold ms-5">Port<span class="text-primary" id="logo">folio</span></a>
+    <button class="navbar-toggler shadow-none border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "> </span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto me-5">
@@ -56,9 +56,51 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
-    
+
+<nav class="navbar navbar-dark  navbar-expand-lg py-0 fixed-top">
+  <div class="container-fluid" id="container">
+    <a data-aos="fade-right" data-aos-duration="1000"  id="logo" href="index.html" class="text-white navbar-brand fs-1 fw-bold ms-5">Port<span class="text-primary" id="logo">folio</span></a>
+    <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header text-white border-bottom">
+        <a data-aos="fade-right" data-aos-duration="1000"  id="logo" href="index.html" class="text-white navbar-brand fs-1 fw-bold ms-4">Port<span class="text-primary" id="logo">folio</span></a>
+        <button type="button" class="btn-close btn-close-white border-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+       
+      </div>
+      <!-- slider body -->
+      <div class="offcanvas-body mt-2">
+        <ul class="navbar-nav ms-auto me-5  text-center">
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" href="#about-section">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" target="_blank" href="https://github.com/Alirazakhan12">Github</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" href="#services-section">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" href="#project-section">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ms-4 text-white" href="#contact-section">Contact</a>
+          </li>
+          <li class="nav-link">
+            <a class="nav-link ms-4 pt-0 text-white" href="" id="moon-icon"><i class="fa fa-moon"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+     
     <!-- navbar end -->
     
     <!-- header start -->
@@ -68,7 +110,7 @@
           <div class="col-lg-6 col-md-6 col-sm-6"><br><br><br><br>
             <strong class="text-white" id="caption">Hello! </strong> <br>
             <span class=" text-white" id="caption">I Am <span class="auto-type"id="caption"></span> </span><br>
-            <span id="para" class="text-white">passionate frontend developer with expertise in HTML, CSS, and JavaScript. I have a keen eye for design and creating seamless user experiences. Proficient in frontend frameworks,Let's build the web together!
+            <span data-aos="fade-up" data-aos-duration="1000" id="para" class="text-white" >passionate frontend developer with expertise in HTML, CSS, and JavaScript. I have a keen eye for design and creating seamless user experiences. Proficient in frontend frameworks,Let's build the web together!
             </span>
             <div class="icon">
               <a href="https://www.facebook.com/profile.php?id=1000170604044185"><i class="fa-brands  fa-facebook-f" id="social-icons"></i></a>
@@ -76,7 +118,7 @@
               <a href="https://www.linkedin.com/in/ali-raza-90180828a"><i class="fa-brands fa-linkedin-in" id="social-icons"></i></a>
               <a href="https://github.com/Alirazakhan12"><i class="fa-brands fa-github" id="social-icons"></i></a>
               </div>
-            <a href="./Resume/RESUME.pdf" target="_blank" type="button" id="cv-btn">Download CV</a>
+            <a data-aos="fade-up" data-aos-duration="1000"  href="./Resume/RESUME.pdf" target="_blank" type="button" id="cv-btn">Download CV</a>
             </div>
           <div class="col-lg-6 col-md-6 col-sm-6 pt-4">
             <div id="img-div" data-aos="zoom-out" data-aos-duration="1500">
@@ -107,7 +149,7 @@
             </span>
             <span id="readmore" class="text-primary" onclick="show()">Read More</span>
             </p>
-        <a href="./Resume/RESUME.pdf" target="_blank" type="button" class="btn btn-outline-primary btn-white" id="cv-btn2">Download CV</a>
+        <a href="./Resume/RESUME.pdf" target="_blank" type="button" class="cv-btn2">Download CV</a>
         </div>
       </div>
       </div>
@@ -162,14 +204,14 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card border-0" id="my-card" data-aos="fade-up" data-aos-duration="1400">
+          <div class="card border-0 my-card" id="my-card" data-aos="fade-up" data-aos-duration="1400">
             <img src="./image/Plant palace.jpg" width="100%" height="100%" alt="" id="f-project"><br>
             <p class="fs-5 text-white">Project Plant-palace.. &nbsp; &#9827;</p> 
             <a href="https://alirazakhan12.github.io/project_plant_palace/" class=" btn btn-outline-light">Check it out</a>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card border-0" id="my-card" data-aos="fade-up" data-aos-duration="2000">
+          <div class="card border-0 my-card" id="my-card" data-aos="fade-up" data-aos-duration="2000">
             <img src="./image/E-commerce.jpg" width="100%" height="100%" alt="" id="f-project"><br>
             <p class="fs-5 text-white">E-commerce website Demo &nbsp; &#9827;</p>
             <a href="https://www.figma.com/proto/0k3t9RTj1xcQnBzPUpOJtD/E-commerce-web?page-id=0%3A1&type=design&node-id=1-3&viewport=829%2C56%2C0.1&t=mZH8nilMAAT1SYK0-1&scaling=scale-down-width&mode=design" class=" btn btn-outline-light">Check it out</a>
@@ -205,7 +247,7 @@
           &emsp; &emsp; &emsp;  <span class="ms-2">+92 3179358806</span> <br><br>
           <i class="fa fa-envelope fs-3" id="email-icon"></i>
           <span class="text-primary ms-2">Email:</span> <br>
-          &emsp; &emsp; &emsp;  <a href="mailto:razaali346863@gmail.com" class="ms-3" style="text-decoration: none; color: rgb(126, 126, 126);">razaali346863@gmail</a>
+          &emsp; &emsp; &emsp; <span> <a href="mailto:razaali346863@gmail.com" class="ms-3">razaali346863@gmail</a></span>
           </div>
         </div>
       </div>
