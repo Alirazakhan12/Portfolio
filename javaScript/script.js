@@ -143,4 +143,8 @@ sendBtn.addEventListener("click", function () {
   localStorage.getItem("name");
   localStorage.getItem("email");
   localStorage.getItem("message");
+  
 });
+function submitted(){
+  alert("Your message has been received, and I'll get back to you as soon as possible. In the meantime, feel free to explore my portfolio or check out my latest projects.")
+}
