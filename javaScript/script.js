@@ -68,7 +68,6 @@ function updateTheme() {
   let uiCard = document.getElementById("ui-ux-card");
   let webDesignCard = document.getElementById("web-design-card");
   let seoCard = document.getElementById("seo-card");
-  let cvBtn = document.getElementsByClassName("cv-btn2")[0];
   let contact = document.getElementById("contact");
   let address = document.getElementById("address");
   let mycard = document.querySelector("#my-card");
@@ -89,7 +88,6 @@ function updateTheme() {
     webDesignCard.style.backgroundColor = "#0E3360";
     seoCard.style.color = "white";
     seoCard.style.backgroundColor = "#0E3360";
-    cvBtn.style.color = "white";
     contact.style.backgroundColor = "#0E3360";
     address.style.backgroundColor = "#0E3360";
     address.style.color = "white";
@@ -99,7 +97,7 @@ function updateTheme() {
     mycard2.style.backgroundColor = "#0E3360";
     mycard3.style.backgroundImage = "none";
     mycard3.style.backgroundColor = "#0E3360";
-    moon_icon.style.color = "#3877ff";
+    moon_icon.style.color = "#02294c";
   } else {
     // Light mode
     body.style.backgroundColor = "white";
@@ -114,7 +112,6 @@ function updateTheme() {
     webDesignCard.style.backgroundColor = "";
     seoCard.style.color = "";
     seoCard.style.backgroundColor = "";
-    cvBtn.style.color = "";
     contact.style.backgroundColor = "";
     address.style.backgroundColor = "";
     address.style.color = "";
@@ -143,8 +140,9 @@ sendBtn.addEventListener("click", function () {
   localStorage.getItem("name");
   localStorage.getItem("email");
   localStorage.getItem("message");
-  
 });
-function submitted(){
-  alert("Your message has been received, and I'll get back to you as soon as possible. In the meantime, feel free to explore my portfolio or check out my latest projects.")
+function submitted() {
+  alert(
+    "Your message has been received, and I'll get back to you as soon as possible. In the meantime, feel free to explore my portfolio or check out my latest projects."
+  );
 }

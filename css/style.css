@@ -9,13 +9,10 @@
 :root {
   --body-fonts: "Roboto Slab", serif;
 }
-::-webkit-scrollbar {
-  display: none;
-}
 #main-div {
   width: 100%;
   height: 600px;
-  background: linear-gradient(to right, #02294c 70%, #3877ff 30%);
+  background: linear-gradient(to right, #02294c 70%, #f75802 30%);
   border-bottom: 1px solid white;
 }
 #container {
@@ -30,12 +27,13 @@
 }
 .navbar-nav .nav-link {
   position: relative;
-  font-weight: bold;
+  font-weight: lighter;
+  color: white;
 }
 .navbar-nav .nav-item .nav-link::after {
   content: "";
   width: 100%;
-  background-color: white;
+  background-color: #f75802;
   position: absolute;
   height: 2px;
   left: 0;
@@ -46,13 +44,23 @@
 .navbar-nav .nav-item .nav-link:hover::after {
   transform: scale(1);
 }
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffffff;
+}
 
 #offcanvasNavbar {
   background-color: #02294c;
+  /* width: 500px; */
+  border: none;
 }
 #logo {
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
   font-weight: 900;
+  color: #f75802;
 }
 #moon-icon {
   border-radius: 50%;
@@ -61,9 +69,9 @@
   width: 40px;
   text-align: center;
   margin-top: -7px;
+  background-color: #f75802;
 }
 #moon-icon:hover {
-  background-color: #02294c;
 }
 #caption {
   margin-top: 18%;
@@ -71,6 +79,9 @@
   font-size: 34px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
+}
+.auto-type {
+  color: #f75802;
 }
 
 #img-div {
@@ -86,6 +97,36 @@
   position: relative;
   margin-top: 10%;
   margin-left: 15%;
+  animation: animate-border 3s infinite ease-in-out;
+}
+
+@keyframes animate-border {
+  0% {
+    /* border: 8px solid #f75802; */
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fa-arrow-down {
+  animation: moveArrow 1.7s infinite;
 }
 #my-img {
   width: 100%;
@@ -97,7 +138,7 @@
 }
 #social-icons {
   margin: 20px 20px 20px 0px;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   line-height: 30px;
   text-align: center;
   width: 30px;
@@ -114,17 +155,20 @@
 }
 #cv-btn {
   margin-top: 20px;
-  border: 2px solid white;
+  background-color: #f75802;
+  /* border: 2px solid #f75802; */
   padding: 8px 18px 8px 18px;
-  border-radius: 24px;
+  border-radius: 0px;
   color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
+  box-shadow: 4px 4px 0px white;
 }
 #cv-btn:hover {
+  box-shadow: 4px 4px 0px #f75802;
   background-color: white;
   color: #373a3e;
   transition: ease-in-out 0.5s;
@@ -132,10 +176,10 @@
 
 .cv-btn2 {
   margin-top: 20px;
-  border: 2px solid #3877ff;
+  background-color: #f75802;
+  box-shadow: 4px 4px 0px #0e3360;
   padding: 8px 18px 8px 18px;
-  border-radius: 24px;
-  color: #373a3e;
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
@@ -143,8 +187,9 @@
   text-transform: uppercase;
 }
 .cv-btn2:hover {
-  background-color: #3877ff;
-  color: white;
+  box-shadow: 4px 4px 0px #f75802;
+  background-color: white;
+  color: rgb(0, 0, 0);
   transition: ease-in-out 0.2s;
 }
 @media (max-width: 991px) {
@@ -152,13 +197,6 @@
     width: 100%;
     margin-top: 60px;
     margin-left: 20px;
-  }
-  #moon-icon {
-    padding: 40%;
-    background-color: none;
-  }
-  #moon-icon:hover {
-    background-color: transparent;
   }
 }
 @media (max-width: 768px) {
@@ -168,6 +206,9 @@
   #caption {
     font-size: 28px;
   }
+  #scroll-down {
+    display: none;
+  }
 }
 @media (max-width: 576px) {
   #img-div {
@@ -175,6 +216,9 @@
     height: 250px;
     margin: auto;
     margin-top: 0px;
+  }
+  #offcanvasNavbar {
+    width: 240px;
   }
   #main-div {
     background: #02294c;
@@ -231,7 +275,7 @@
   opacity: 0.9;
 }
 #about-img {
-  border-top: 5px solid #3877ff;
+  border-top: 5px solid #f75802;
   border-bottom: 5px solid #000000;
   border-radius: 16px;
   border-top-left-radius: 40%;
@@ -239,6 +283,10 @@
   box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
     rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
     rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.my-self {
+  color: #f75802;
 }
 
 @media (max-width: 1440px) {
@@ -260,6 +308,10 @@
   #readmore {
     display: none;
   }
+  #about-div {
+    margin: auto;
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -279,7 +331,11 @@
     display: none;
   }
   #about-text {
-    margin-top: 30%;
+    margin-top: 25%;
+  }
+  #about-text {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
 @media (max-width: 542px) {
@@ -287,7 +343,7 @@
     display: none;
   }
   #about-text {
-    margin-top: 40%;
+    margin-top: 30%;
   }
 }
 @media (max-width: 400px) {
@@ -295,14 +351,9 @@
     margin-top: 50%;
   }
 }
-@media (max-width: 317px) {
+@media (max-width: 388px) {
   #about-text {
-    margin-top: 65%;
-  }
-}
-@media (max-width: 290px) {
-  #about-text {
-    margin-top: 70%;
+    margin-top: 40%;
   }
 }
 @media (max-width: 290px) {
@@ -322,15 +373,15 @@
 #ui-ux-card,
 #seo-card {
   padding: 12px;
-  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
-    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+  box-shadow: rgba(247, 88, 2, 0.4) 0px 5px, rgba(247, 88, 2, 0.3) 0px 10px,
+    rgba(247, 88, 2, 0.2) 0px 15px, rgba(247, 88, 2, 0.1) 0px 20px,
     rgba(240, 46, 170, 0.05) 0px 25px;
 }
 #web-icon {
   font-weight: bold;
   font-size: 54px;
   margin: auto;
-  color: #3877ff;
+  color: #f75802;
 }
 #descrption {
   opacity: 0.9;
@@ -372,16 +423,49 @@
   background-size: 100% 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #my-card {
-    margin-top: 8px;
+    margin-bottom: 16px;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 576px) {
   #my-card {
-    margin: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 }
+
+/* Achievement section css start */
+#achievement {
+  font-family: var(--body-fonts);
+  margin-top: 5%;
+}
+.carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 5px solid #f75802;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.certificate-img {
+  height: 300px;
+}
+#carousel-indicator {
+  background-color: #f75802;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  margin: 4px;
+}
+
+@media (max-width: 576px) {
+  .carousel {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+/* Achievement section css End */
 
 /* contact us section */
 #contact {
@@ -402,7 +486,7 @@
 }
 #send-btn {
   width: 98px;
-  background-color: #3877ff;
+  background-color: #f75802;
   border: none;
   border-radius: 4px;
   padding: 6px;
@@ -413,7 +497,7 @@
   );
 }
 #send-btn:hover {
-  background-color: #417dff;
+  background-color: #f75802;
 }
 
 #address {
@@ -441,7 +525,7 @@
   text-align: center;
   line-height: 40px;
   font-size: 24px;
-  color: #3877ff;
+  color: #f75802;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-image: linear-gradient(
     rgba(0, 0, 0, 0) 70%,
@@ -468,12 +552,13 @@
 ::-webkit-scrollbar {
   display: block;
   width: 6px;
+  position: absolute;
 }
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: grey;
+  background-color: #f75802;
   border-radius: 50px;
 }
 
@@ -488,7 +573,6 @@
 /* Scroll up button */
 #scroll-icon {
   color: #ffffff;
-  border: 1px solid rgb(255, 255, 255);
   padding: 0px 12px 0px 12px;
   border-radius: 50%;
   position: absolute;
@@ -499,11 +583,27 @@
   line-height: 37px;
   display: none;
   cursor: pointer;
-  background-color: #0e3360;
+  background-color: #f75802;
 }
 #scroll-icon:hover {
   background-color: #17447b;
   color: white;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fa-arrow-up {
+  animation: moveArrow 1s infinite;
 }
 
 /* Mode Icon css */
