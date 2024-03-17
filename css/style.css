@@ -88,9 +88,9 @@
   width: 60%;
   height: 350px;
   border: 8px solid white;
-  box-shadow: 0 0 0rem #ffff, inset 0 0 0.2rem white, 0 0 0.7rem #3877ff,
-    inset 0 0 0.7rem #3877ff, 0 0 0.7rem #3877ff, inset 0 0 0.7rem #3877ff,
-    0 0 0.7rem #3877ff, inset 0 0 0.3rem #3877ff;
+  box-shadow: 0 0 0rem #ffff, inset 0 0 0.2rem white, 0 0 0.7rem #f75802,
+    inset 0 0 0.7rem #f75802, 0 0 0.7rem #f75802, inset 0 0 0.7rem #f75802,
+    0 0 0.7rem #f75802, inset 0 0 0.3rem #f75802;
   background: #262525;
 
   border-radius: 50%;
